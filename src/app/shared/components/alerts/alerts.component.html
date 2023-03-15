@@ -1,0 +1,9 @@
+<div class="toast-container">
+  <ngb-toast
+    *ngFor="let alert of alertService.alerts"
+    [header]="alert.title"
+    [delay]="8000"
+    [class]="alert.type">
+    {{ alert.text }}
+  </ngb-toast>
+</div>

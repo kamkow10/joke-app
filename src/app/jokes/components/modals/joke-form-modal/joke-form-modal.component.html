@@ -1,0 +1,12 @@
+<h2>Dodawanie żartu</h2>
+<form [formGroup]="jokeForm" (ngSubmit)="onSubmit()">
+  <select formControlName="category" class="form-select" required>
+    <option value="" disabled selected>Wybierz kategorię</option>
+    <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+  </select>
+  <textarea formControlName="joke" class="form-control" rows="8" placeholder="Wprowadź treść żartu" required></textarea>
+  <div class="form-buttons-container">
+    <button type="button" class="btn btn-link" (click)="modal.dismiss()">Anuluj</button>
+    <button [disabled]="shouldDisableForm" type="submit" class="btn btn-primary">Dodaj</button>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row button-container">
+    <div class="col">
+      <button appAddJoke type="button" class="btn btn-primary">Dodaj</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-joke *ngFor="let joke of firstHalfOfJokes" [joke]="joke" [deleteOption]="true"></app-joke>
+    </div>
+    <div class="col-md-6">
+      <app-joke *ngFor="let joke of secondHalfOfJokes" [joke]="joke" [deleteOption]="true"></app-joke>
+    </div>
+  </div>
+</div>

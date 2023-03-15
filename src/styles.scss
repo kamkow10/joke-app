@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+// Override bootstrap variables
+$primary: $app-color-primary;
+$danger: $app-color-danger;
+
+@import 'bootstrap/scss/bootstrap';
+
+
+*, *:after, *:before {
+  font-family: 'Open Sans', sans-serif;
+  color: $app-color-text-default;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: $app-font-weight-bold;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-weight: $app-font-weight-bold;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+
+  &.btn-danger, &.btn-danger:active {
+    color: $app-color-text-white;
+  }
+}
+
+.bold {
+  font-weight: $app-font-weight-bold;
+}
+
+.shadow-box, .modal-content {
+  padding: 2rem;
+  box-shadow: $app-box-shadow-lg;
+  border-radius: 0.625rem;
+}
+
+.form-control, .form-select {
+  margin-bottom: 1rem;
+  border-radius: 0;
+  border: 1px solid $app-color-input-border-gray;
+  font-size: 0.875rem;
+}
+
+.modal-lg {
+  max-width: 600px;
+}
+
+.form-buttons-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toast-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+
+  .toast {
+    border: none;
+
+    &.success {
+      background-color: $app-color-success;
+
+      .toast-header {
+        background-color: $app-color-success;
+      }
+    }
+
+    .toast-header {
+      border: none;
+
+      strong {
+        color: $app-color-text-white;
+      }
+
+      .btn-close {
+        background: url('app/assets/icons/x-mark-white.svg') no-repeat;
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+
+    .toast-body {
+      color: $app-color-text-white;
+    }
+  }
+}

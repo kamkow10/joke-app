@@ -1,0 +1,13 @@
+<div class="container-fluid shadow-box" *ngIf="joke">
+  <div class="category">
+    kategoria: <span class="bold">{{ joke.category.name }}</span>
+  </div>
+  <div class="joke">
+    <div class="joke-text">
+      {{ joke.content }}
+    </div>
+    <div *ngIf="deleteOption" class="delete-button-container">
+      <button appDeleteJoke [jokeId]="joke.id" type="button" class="btn btn-danger">Usuń</button>
+    </div>
+  </div>
+</div>

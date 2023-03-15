@@ -1,0 +1,6 @@
+<h2>Potwierdzenie</h2>
+<div class="text-center">Czy na pewno chcesz usunąć wybrany żart?</div>
+<div class="form-buttons-container">
+  <button type="button" class="btn btn-link" (click)="modal.dismiss()">Nie</button>
+  <button [disabled]="!jokeId" type="button" class="btn btn-primary" (click)="deleteJoke()">Tak</button>
+</div>

@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <button appAddJoke type="button" class="btn btn-primary">Dodaj</button>
+    </div>
+  </div>
+  <ng-container *ngIf="jokes.length">
+    <div class="row">
+      <div class="col">
+        <app-joke [joke]="presentingJoke"></app-joke>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <button type="button" class="btn btn-primary" (click)="presentRandom()">Pokaż następny</button>
+      </div>
+    </div>
+  </ng-container>
+</div>

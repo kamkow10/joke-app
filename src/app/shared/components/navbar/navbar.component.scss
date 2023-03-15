@@ -1,0 +1,24 @@
+@import 'variables';
+
+.navbar {
+  min-height: 80px;
+  padding: 1rem;
+  box-shadow: $app-box-shadow-sm;
+
+  .navbar-collapse {
+    justify-content: flex-end;
+
+    &.show {
+      margin-top: 1rem;
+    }
+  }
+
+  .nav-link {
+    font-weight: $app-font-weight-bold;
+    color: $app-color-text-default;
+
+    &.active {
+      color: $app-color-primary;
+    }
+  }
+}
